@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={->, >=stealth',thin},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black}
+    ]
+
+    % define simple function
+    \coordinate(O) at (0,0); \coordinate (r1) at (0.25,0);
+    \coordinate (r2) at (0.25,0.4); \coordinate(r3) at (0.45,0.4);
+    \coordinate (r4) at (0.45,0.6); \coordinate (r5) at (0.7,0.6);
+    \coordinate (r6) at (0.7,0); \coordinate (r7) at (1.07,0);
+    % define dashed line
+    \coordinate (d1) at (0,0.4); 
+    \coordinate (d2) at (0,0.6);
+    \coordinate (d3) at (0.45,0);
+    % axis
+    \draw[axis] (-0.1,0)  -- (1.1,0) node(xline)[below] {$\Omega$};
+    \draw[axis] (0,-0.1) -- (0,1.1) node(yline)[above] {};
+    % drawing simple function
+    \draw[important line,blue]  (O) -- (r1);
+    \draw[important line,blue]  (r2) -- (r3);
+    \draw[important line,blue]  (r4) -- (r5);
+    \draw[important line,blue]  (r6) -- (r7);
+    % dashed line
+    \draw[dashed line] (r1) -- (r2);
+    \draw[dashed line] (r5) -- (r6);
+    \draw[dashed line] (d1) node[left, text width=0.5em] {$s$} -- (r2);
+    \draw[dashed line] (d2) node[left, text width=0.5em] {$t$} -- (r4);
+    \draw[dashed line] (d3) -- (r4);
+    % label A,B
+   \draw[important line]  (r1) -- node[below] {$A$} (d3);
+   \draw[important line]  (d3) -- node[below] {$B$} (r6);
+    
+\end{tikzpicture}

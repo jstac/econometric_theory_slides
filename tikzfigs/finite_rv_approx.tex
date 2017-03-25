@@ -1,0 +1,37 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black}
+    ]
+   % define simple function
+   \coordinate(O) at (0,0);
+   \coordinate (s1) at (0.25,0);
+   \coordinate (s2) at (0.65,0);
+   \coordinate (s3) at (-0.15,0);
+   \coordinate (s4) at (0.25,0.4);
+   \coordinate (s5) at (0.65,0.4);
+   \coordinate (s6) at (0.65,0.8);
+   \coordinate (s7) at (1.1,0.8);
+   \coordinate (s8) at (0,0.7);
+   \coordinate (s9) at (1.1,0.95);
+   % axis
+   \draw[axis] (O)  -- (1.1,0) node(xline)[below, xshift=-0.8cm] {$\Omega$};
+   \draw[axis] (0,0) -- (0,1.1) node(yline)[above] {};
+   % drawing simple function
+   \draw[important line,blue]  (O) -- (s1);
+   \draw[important line,blue]  (s4) -- (s5);
+   \draw[important line,blue]  (s6) -- (s7) node[right] {$x_n$};
+   % continuous rv
+   \draw[thick, xshift=0cm] plot [smooth, tension=1] coordinates { (O) (s4) (s6) (s9)} node[right] {$x$};
+   % dashed line
+   \draw[dashed line] (s1) -- (s4);
+   \draw[dashed line] (s5) -- (s6);
+   %circles
+   \node[circle, draw,thin,blue,fill=white!10, scale=0.25] at (s1){};
+   \node[circle, draw,thin,blue,fill=white!10, scale=0.25] at (s5){};
+   \node[fill=blue,circle,scale=0.25] at (s4){};
+   \node[fill=blue,circle,scale=0.25] at (s6){};
+\end{tikzpicture}
+

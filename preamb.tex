@@ -1,0 +1,327 @@
+\documentclass[xcolor=dvipsnames]{beamer}  % for hardcopy add 'trans'
+
+\mode<presentation>
+{
+  \usetheme{Singapore}
+  % or ...
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usefonttheme{professionalfonts}
+%\usepackage[english]{babel}
+% or whatever
+%\usepackage[latin1]{inputenc}
+% or whatever
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+%%%%%%%%%%%%%%%%%%%%%% start my preamble %%%%%%%%%%%%%%%%%%%%%%
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\setbeamercolor{footline}{fg=blue}
+\setbeamerfont{footline}{series=\bfseries}
+
+
+%\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+
+\usepackage{fancyvrb}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+
+\usepackage{graphviz}
+ 
+\usepackage{verbatim}
+
+
+\usepackage{algorithmicx,algpseudocode}
+
+
+%font
+\usepackage{mathpazo}
+%\usepackage[usenames, dvipsnames]{color}
+
+%\usepackage[linesnumbered, ruled, lined]{algorithm2e}
+
+\usepackage{xr}
+\externaldocument[ET-]{et}
+
+
+\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+
+\newcommand{\newtopic}[1]{\textcolor{Green}{\Large \bf #1}}
+\newcommand{\navy}[1]{\textcolor{Blue}{\bf #1}}
+\newcommand{\navymth}[1]{\textcolor{Blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
+\definecolor{pale}{RGB}{235, 235, 235}
+\definecolor{pale2}{RGB}{175,238,238}
+\definecolor{turquois4}{RGB}{0,134,139}
+
+% Typesetting code
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\newminted{python}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{ipython}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{julia}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{c}{mathescape,linenos=true}
+\newminted{r}{mathescape,  frame=none, baselinestretch=1, framesep=2mm}
+\renewcommand{\theFancyVerbLine}{\sffamily
+    \textcolor[rgb]{0.5,0.5,1.0}{\scriptsize {\arabic{FancyVerbLine}}}}
+
+
+\usepackage{stmaryrd}
+
+\newcommand{\Fact}{\textcolor{Brown}{\bf Fact. }}
+\newcommand{\Facts}{\textcolor{Brown}{\bf Facts }}
+\newcommand{\keya}{\textcolor{turquois4}{\bf Key Idea. }}
+\newcommand{\Factnodot}{\textcolor{Brown}{\bf Fact }}
+\newcommand{\Eg}{\textcolor{ForestGreen}{Example. }}
+\newcommand{\Egs}{\textcolor{ForestGreen}{Examples. }}
+\newcommand{\Ex}{{\bf Ex. }}
+\newcommand{\Thm}{\textcolor{Brown}{\bf Theorem. }}
+\newcommand{\Prf}{\textcolor{turquois4}{\bf Proof.}}
+\newcommand{\Ass}{\textcolor{turquois4}{\bf Assumption.}} 
+\newcommand{\Lem}{\textcolor{Brown}{\bf Lemma. }}
+
+%source code 
+
+
+
+% caligraphic
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{subfigure}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}}
+\newcommand\raiseT[2]{\raisebox{0.25ex}{$#1#2$}}
+
+\DeclareMathOperator{\cl}{cl}
+%\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\Prob}{Prob}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\determinant}{det}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\range}{rng}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\mse}{mse}
+\DeclareMathOperator{\se}{se}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\dimension}{dim}
+\DeclareMathOperator{\fracpart}{frac}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\colspace}{colspace}
+
+\providecommand{\inner}[1]{\left\langle{#1}\right\rangle}
+
+% mics short cuts and symbols
+% mics short cuts and symbols
+\newcommand{\st}{\ensuremath{\ \mathrm{s.t.}\ }}
+\newcommand{\setntn}[2]{ \{ #1 : #2 \} }
+\newcommand{\cf}[1]{ \lstinline|#1| }
+\newcommand{\otms}[1]{ \leftidx{^\circ}{#1}}
+
+\newcommand{\fore}{\therefore \quad}
+\newcommand{\tod}{\stackrel { d } {\to} }
+\newcommand{\tow}{\stackrel { w } {\to} }
+\newcommand{\toprob}{\stackrel { p } {\to} }
+\newcommand{\toms}{\stackrel { ms } {\to} }
+\newcommand{\eqdist}{\stackrel {\textrm{ \scriptsize{d} }} {=} }
+\newcommand{\iidsim}{\stackrel {\textrm{ {\sc iid }}} {\sim} }
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\dee}{\,{\rm d}}
+\newcommand{\given}{\, | \,}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\renewcommand{\rho}{\varrho}
+
+\newcommand{\htau}{ \hat \tau }
+\newcommand{\hgamma}{ \hat \gamma }
+
+\newcommand{\boldx}{ {\mathbf x} }
+\newcommand{\boldu}{ {\mathbf u} }
+\newcommand{\boldv}{ {\mathbf v} }
+\newcommand{\boldw}{ {\mathbf w} }
+\newcommand{\boldy}{ {\mathbf y} }
+\newcommand{\boldb}{ {\mathbf b} }
+\newcommand{\bolda}{ {\mathbf a} }
+\newcommand{\boldc}{ {\mathbf c} }
+\newcommand{\boldi}{ {\mathbf i} }
+\newcommand{\bolde}{ {\mathbf e} }
+\newcommand{\boldp}{ {\mathbf p} }
+\newcommand{\boldq}{ {\mathbf q} }
+\newcommand{\bolds}{ {\mathbf s} }
+\newcommand{\boldt}{ {\mathbf t} }
+\newcommand{\boldz}{ {\mathbf z} }
+
+\newcommand{\boldzero}{ {\mathbf 0} }
+\newcommand{\boldone}{ {\mathbf 1} }
+
+\newcommand{\boldalpha}{ {\boldsymbol \alpha} }
+\newcommand{\boldbeta}{ {\boldsymbol \beta} }
+\newcommand{\boldgamma}{ {\boldsymbol \gamma} }
+\newcommand{\boldtheta}{ {\boldsymbol \theta} }
+\newcommand{\boldxi}{ {\boldsymbol \xi} }
+\newcommand{\boldtau}{ {\boldsymbol \tau} }
+\newcommand{\boldepsilon}{ {\boldsymbol \epsilon} }
+\newcommand{\boldmu}{ {\boldsymbol \mu} }
+\newcommand{\boldSigma}{ {\boldsymbol \Sigma} }
+\newcommand{\boldOmega}{ {\boldsymbol \Omega} }
+\newcommand{\boldPhi}{ {\boldsymbol \Phi} }
+\newcommand{\boldLambda}{ {\boldsymbol \Lambda} }
+\newcommand{\boldphi}{ {\boldsymbol \phi} }
+
+\newcommand{\Sigmax}{ {\boldsymbol \Sigma_{\boldx}}}
+\newcommand{\Sigmau}{ {\boldsymbol \Sigma_{\boldu}}}
+\newcommand{\Sigmaxinv}{ {\boldsymbol \Sigma_{\boldx}^{-1}}}
+\newcommand{\Sigmav}{ {\boldsymbol \Sigma_{\boldv \boldv}}}
+
+\newcommand{\hboldx}{ \hat {\mathbf x} }
+\newcommand{\hboldy}{ \hat {\mathbf y} }
+\newcommand{\hboldb}{ \hat {\mathbf b} }
+\newcommand{\hboldu}{ \hat {\mathbf u} }
+\newcommand{\hboldtheta}{ \hat {\boldsymbol \theta} }
+\newcommand{\hboldtau}{ \hat {\boldsymbol \tau} }
+\newcommand{\hboldmu}{ \hat {\boldsymbol \mu} }
+\newcommand{\hboldbeta}{ \hat {\boldsymbol \beta} }
+\newcommand{\hboldgamma}{ \hat {\boldsymbol \gamma} }
+\newcommand{\hboldSigma}{ \hat {\boldsymbol \Sigma} }
+
+\newcommand{\boldA}{\mathbf A}
+\newcommand{\boldB}{\mathbf B}
+\newcommand{\boldC}{\mathbf C}
+\newcommand{\boldD}{\mathbf D}
+\newcommand{\boldI}{\mathbf I}
+\newcommand{\boldL}{\mathbf L}
+\newcommand{\boldM}{\mathbf M}
+\newcommand{\boldP}{\mathbf P}
+\newcommand{\boldQ}{\mathbf Q}
+\newcommand{\boldR}{\mathbf R}
+\newcommand{\boldX}{\mathbf X}
+\newcommand{\boldU}{\mathbf U}
+\newcommand{\boldV}{\mathbf V}
+\newcommand{\boldW}{\mathbf W}
+\newcommand{\boldY}{\mathbf Y}
+\newcommand{\boldZ}{\mathbf Z}
+
+\newcommand{\bSigmaX}{ {\boldsymbol \Sigma_{\hboldbeta}} }
+\newcommand{\hbSigmaX}{ \mathbf{\hat \Sigma_{\hboldbeta}} }
+
+\newcommand{\RR}{\mathbbm R}
+\newcommand{\CC}{\mathbbm C}
+\newcommand{\NN}{\mathbbm N}
+\newcommand{\PP}{\mathbbm P}
+\newcommand{\EE}{\mathbbm E \nobreak\hspace{.1em}}
+\newcommand{\EEP}{\mathbbm E_P \nobreak\hspace{.1em}}
+\newcommand{\ZZ}{\mathbbm Z}
+\newcommand{\QQ}{\mathbbm Q}
+
+
+\newcommand{\XX}{\mathcal X}
+
+\newcommand{\aA}{\mathcal A}
+\newcommand{\fF}{\mathscr F}
+\newcommand{\bB}{\mathscr B}
+\newcommand{\iI}{\mathscr I}
+\newcommand{\rR}{\mathscr R}
+\newcommand{\dD}{\mathcal D}
+\newcommand{\lL}{\mathcal L}
+\newcommand{\llL}{\mathcal{H}_{\ell}}
+\newcommand{\gG}{\mathcal G}
+\newcommand{\hH}{\mathcal H}
+\newcommand{\nN}{\textrm{\sc n}}
+\newcommand{\lN}{\textrm{\sc ln}}
+\newcommand{\pP}{\mathscr P}
+\newcommand{\qQ}{\mathscr Q}
+\newcommand{\xX}{\mathcal X}
+
+\newcommand{\ddD}{\mathscr D}
+
+
+\newcommand{\R}{{\texttt R}}
+\newcommand{\risk}{\mathcal R}
+\newcommand{\Remp}{R_{{\rm emp}}}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\ess}{ \textrm{{\sc ess}} }
+\newcommand{\tss}{ \textrm{{\sc tss}} }
+\newcommand{\rss}{ \textrm{{\sc rss}} }
+\newcommand{\rssr}{ \textrm{{\sc rssr}} }
+\newcommand{\ussr}{ \textrm{{\sc ussr}} }
+\newcommand{\zdata}{\mathbf{z}_{\mathcal D}}
+\newcommand{\Pdata}{P_{\mathcal D}}
+\newcommand{\Pdatatheta}{P^{\mathcal D}_{\theta}}
+\newcommand{\Zdata}{Z_{\mathcal D}}
+
+
+
+
+\newcommand{\e}[1]{\mathbbm{E}[{#1}]}
+\newcommand{\p}[1]{\mathbbm{P}({#1})}
+
+%\theoremstyle{plain}
+%\newtheorem{axiom}{Axiom}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{remark}{Remark}[section]
+%\newtheorem{notation}{Notation}[section]
+%\newtheorem{assumption}{Assumption}[section]
+%\newtheorem{condition}{Condition}[section]
+%\newtheorem{exercise}{Ex.}[section]
+%\newtheorem{fact}{Fact}[section]
+
+% Bibliography
+\usepackage[authordate,uniquename=false,firstinits,backend=biber,maxcitenames=2]{biblatex-chicago}
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[inproceedings]{title}{#1}
+\addbibresource{et_newbib.bib}
+\renewcommand{\cite}{\textcite}
+
+
+
+\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
+
+
+\setlength{\jot}{12pt} 
+
+
+
+

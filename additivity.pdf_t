@@ -1,0 +1,27 @@
+\begin{picture}(0,0)%
+\includegraphics{additivity.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(10515,8750)(301,-8608)
+\put(5671,-1051){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Omega$}%
+}}}}
+\put(3061,-4561){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C$}%
+}}}}
+\put(3961,-2401){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$A$}%
+}}}}
+\put(8011,-4021){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$B$}%
+}}}}
+\put(10801,-4606){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\PP(B) = \frac{4}{N}$}%
+}}}}
+\put(451,-781){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\PP(A) = \frac{2}{N}$}%
+}}}}
+\put(316,-7441){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\PP(C) = \frac{3}{N}$}%
+}}}}
+\end{picture}%

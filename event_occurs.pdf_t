@@ -1,0 +1,33 @@
+\begin{picture}(0,0)%
+\includegraphics{event_occurs.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(12233,6927)(798,-8068)
+\put(3691,-2491){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$A$}%
+}}}}
+\put(1711,-5281){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Omega$}%
+}}}}
+\put(10936,-2536){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$A$}%
+}}}}
+\put(8866,-3526){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\omega$}%
+}}}}
+\put(6121,-1276){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}outcome}%
+}}}}
+\put(9316,-5326){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Omega$}%
+}}}}
+\put(3286,-3121){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\omega$}%
+}}}}
+\put(6166,-6271){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}outcome}%
+}}}}
+\put(2071,-7531){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}event $A$ occurs}%
+}}}}
+\put(9496,-7441){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$A$ does not occur}%
+}}}}
+\end{picture}%

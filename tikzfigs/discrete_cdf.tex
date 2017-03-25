@@ -1,0 +1,45 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    decoration={brace,amplitude=7pt},
+    ]
+
+    % define simple function
+    \coordinate(O) at (0,0);
+    \coordinate (s1) at (0.25,0);
+    \coordinate (s2) at (0.65,0);
+    \coordinate (s3) at (-0.15,0);
+    \coordinate (s4) at (0.25,0.4);
+    \coordinate (s5) at (0.65,0.4);
+    \coordinate (s6) at (0.65,0.8);
+    \coordinate (s7) at (1.1,0.8);
+    % define curly bracket location
+    \coordinate (c1) at (0.23,0.05); \coordinate (c2) at (0.23,0.35);
+    \coordinate (c3) at (0.63,0.75); \coordinate (c4) at (0.63,0.45);
+    % axis
+    \draw[axis] (-0.15,0)  -- (1.1,0) node(xline)[below] {};
+    \draw[axis] (0,0) -- (0,1.0) node(yline)[above] {};
+    % drawing simple function
+    \draw[important line,blue]  (s3) -- (s1);
+    \draw[important line,blue]  (s4) -- (s5);
+    \draw[important line,blue]  (s6) -- (s7);
+    % dashed line
+    \draw[dashed line] (s1) node[below] {$s_1$} -- (s4);
+    \draw[dashed line] (s2) node[below] {$s_2$} -- (s6);
+   % label y axis
+   \foreach \y/\ytext in {0.8}
+        \draw (0.0pt,\y cm) -- (-0.4pt,\y cm) node[anchor=east] {$1$};
+   %curly bracket
+   \draw [decorate,very thick] (c1) -- (c2)
+   node [midway,anchor=east,inner sep=5pt, outer sep=5pt]{$p_1$};
+   \draw [decorate,very thick] (c4) -- (c3)
+   node [midway,anchor=east,inner sep=5pt, outer sep=5pt]{$p_2$};
+   %circles
+   \node[circle, draw,thin,blue,fill=white!10, scale=0.25] at (s1){};
+   \node[circle, draw,thin,blue,fill=white!10, scale=0.25] at (s5){};
+   \node[fill=blue,circle,scale=0.25] at (s4){};
+   \node[fill=blue,circle,scale=0.25] at (s6){};
+\end{tikzpicture}

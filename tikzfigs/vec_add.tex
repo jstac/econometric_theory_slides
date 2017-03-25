@@ -1,0 +1,25 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={<->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black}
+    ]
+
+    % define x,y
+    \coordinate(O) at (0,0);
+    \coordinate (X) at (0.6,0.1);
+    \coordinate (Y) at (0.4,0.7);
+    \coordinate (X+Y) at (1,0.8);
+    % axis
+    \draw[axis] (-0.1,0)  -- (1.1,0) node(xline)[right] {};
+    \draw[axis] (0,-0.1) -- (0,1.1) node(yline)[above] {};
+    % x, y, x+y
+    \draw[important line, ->]  (O) -- (X) node[right, text width=5em] {$\boldx$};
+    \draw[important line, ->]  (O) -- (Y) node[left, text width=0.5em] {$\boldy$};
+    \draw[important line, ->,red]  (O) -- (X+Y) node[right, text width=5em]
+    {$\boldx + \boldy$};
+    % dashed line
+    \draw[dashed line] (X) -- (X+Y);
+    \draw[dashed line] (Y) -- (X+Y);
+\end{tikzpicture}

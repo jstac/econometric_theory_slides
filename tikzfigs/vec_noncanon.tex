@@ -1,0 +1,19 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={<->, >=stealth'},
+    important line/.style={thick,color=blue},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black}
+    ]
+
+    % define x,y
+    \coordinate(O) at (0,0);
+    \coordinate (e1) at (0.2,0);
+    \coordinate (x) at (-0.4,0);
+    % axis
+    \draw[axis] (-1,0)  -- (1,0) node(xline)[right] {};
+    \draw[axis] (0,-0.2) -- (0,0.2) node(yline)[above] {};
+    % x, y, x+y
+    \draw[important line, ->]  (O) -- (e1) node[anchor = south west, text width=5em] {$\boldx_1 = (1,0)$};
+    \draw[important line, ->]  (O) -- (x) node[below, text width=6em] {$\boldx_2 = (-2,0)$};
+\end{tikzpicture}

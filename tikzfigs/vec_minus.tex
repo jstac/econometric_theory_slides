@@ -1,0 +1,26 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={<->, >=stealth'},
+    important line/.style={thick},
+    line/.style={thin},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    ]
+
+    % define x,y
+    \coordinate(O) at (0,0);
+    \coordinate (X) at (0.6,0.1);
+    \coordinate (Y) at (0.4,0.55);
+    \coordinate (X-Y) at (0.2,-0.45);
+    % axis
+    \draw[axis] (-0.3,0)  -- (0.9,0) node(xline)[right] {};
+    \draw[axis] (0,-0.5) -- (0,0.7) node(yline)[above] {};
+    % x, y, x+y
+    \draw[important line, ->]  (O) -- (X) node[right, text width=5em] {$\boldx$};
+    \draw[important line, ->]  (O) -- (Y) node[right, text width=5em] {$\boldy$};
+    \draw[important line, ->,red]  (O) -- (X-Y) node[right, text width=5em] {$\boldx - \boldy$};
+    % dashed line
+    \draw[dashed line, ->,red] (Y) -- (X);
+    %path
+     \draw[-latex, very thin] (0.5,0.25) to [out=180,in=0] (0.1,-0.2);
+\end{tikzpicture}
