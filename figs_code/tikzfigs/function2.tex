@@ -1,0 +1,44 @@
+
+\begin{tikzpicture}[scale=0.4,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    decoration={brace,amplitude=7pt},
+    ] 
+%% draw circles
+\draw[name path=ellipse,very thick]
+		(-5,0) circle[x radius = 2 cm, y radius = 4 cm];
+
+\draw[name path=ellipse,very thick]
+		(5,0) circle[x radius = 2 cm, y radius = 4 cm];
+
+%% draw nodes
+\coordinate (a1) at (-5, 1);  
+\coordinate (a2) at (-5, -1);  
+\coordinate (b1) at (5, 1);   
+\coordinate (bb1) at (4.8, 1);   
+\coordinate (b2) at (5, -1);   
+\coordinate (bb2) at (4.8, -1);   
+
+\node[fill=black,circle,scale=0.37] at (a1) {};
+\node[fill=black,circle,scale=0.37] at (a2){};
+\node[fill=black,circle,scale=0.37] at (b1){};
+\node[fill=black,circle,scale=0.37] at (b2){};
+
+\node[right] at (b1) {$y_1$};
+\node[left] at (a1) {$x_1$};
+\node[right] at (b2) {$y_2$};
+\node[left] at (a2) {$x_2$};
+
+%% paths
+\draw[-latex, very thin] (a1)  to [out=20,in=160] node[above] {$f$} (bb1);
+\draw[-latex, very thin] (a2)  to [out=-20,in=-160] node[above] {$f$} (bb2);
+
+
+%% A & B & C
+\node at (-5, 5) {$A$};
+\node at (5, 5) {$B$};
+
+
+\end{tikzpicture}

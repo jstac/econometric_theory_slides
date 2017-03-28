@@ -1,0 +1,19 @@
+\begin{tikzpicture}[
+    scale=5,
+    axis/.style={<->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black}
+    ]
+
+    % define x,-2x
+    \coordinate(O) at (0,0);
+    \coordinate (X) at (0.2,0.2);
+    \coordinate (-2X) at (-0.4,-0.4);
+    % axis
+    \draw[axis] (-0.6,0)  -- (0.6,0) node(xline)[right] {};
+    \draw[axis] (0,-0.6) -- (0,0.6) node(yline)[above] {};
+    % x, y, x+y
+    \draw[important line, ->]  (O) -- (X) node[right, text width=5em] {$\boldx$};
+    \draw[important line, ->, red]  (O) -- (-2X) node[right, text width=5em] {$-2\boldx$};
+\end{tikzpicture}

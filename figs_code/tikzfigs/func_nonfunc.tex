@@ -1,0 +1,105 @@
+\begin{tikzpicture}[scale=0.4,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    decoration={brace,amplitude=7pt},
+    ] 
+%% draw circles
+\draw[name path=ellipse,very thick]
+		(-8,5) circle[x radius = 1.3 cm, y radius = 2 cm];
+\draw[name path=ellipse,very thick]
+		(-3,5) circle[x radius = 1.3 cm, y radius = 2 cm];
+
+\draw[name path=ellipse,very thick]
+		(3,5) circle[x radius = 1.3 cm, y radius = 2 cm];
+\draw[name path=ellipse,very thick]
+		(8,5) circle[x radius = 1.3 cm, y radius = 2 cm];
+	
+\draw[name path=ellipse,very thick]
+		(-8,-5) circle[x radius = 1.3 cm, y radius = 2 cm];
+\draw[name path=ellipse,very thick]
+		(-3,-5) circle[x radius = 1.3 cm, y radius = 2 cm];
+
+\draw[name path=ellipse,very thick]
+		(3,-5) circle[x radius = 1.3 cm, y radius = 2 cm];
+\draw[name path=ellipse,very thick]
+		(8,-5) circle[x radius = 1.3 cm, y radius = 2 cm];
+
+
+%% draw nodes
+\coordinate (a1) at (-8,5); 
+\coordinate (a2) at (-8,6);
+\coordinate (a3) at (-8,4);
+\coordinate (a4) at (-3,5.5); \coordinate (aa4) at (-3.2,5.5);
+\coordinate (a5) at (-3,4.5); \coordinate (a51) at (-3.2,4.4); \coordinate (a52) at (-3.2,4.6);
+
+\coordinate (b1) at (3,5);
+\coordinate (b2) at (8,5.5);
+\coordinate (b3) at (8,4.5); \coordinate (bb3) at (7.8,4.5);
+
+\coordinate (c1) at (-8,-5);
+\coordinate (c2) at (-8,-6);
+\coordinate (c3) at (-8,-4);
+\coordinate (c4) at (-3,-5.5); \coordinate (c41) at (-3.2,-5.4); \coordinate (c42) at (-3.2,-5.6);
+\coordinate (c5) at (-3,-4.5); \coordinate (c51) at (-3.2,-4.4); \coordinate (c52) at (-3.2,-4.6);
+
+\coordinate (d1) at (3,-5);
+\coordinate (d2) at (3,-6);
+\coordinate (d3) at (3,-4);
+\coordinate (d4) at (8,-5); \coordinate (d41) at (7.8,-5.1); \coordinate (d42) at (7.8,-4.9);
+
+\node[fill=black,circle,scale=0.37] at (a1){};
+\node[fill=black,circle,scale=0.37] at (a2){};
+\node[fill=black,circle,scale=0.37] at (a3){};
+\node[fill=black,circle,scale=0.37] at (a4){};
+\node[fill=black,circle,scale=0.37] at (a5){};
+\node[fill=black,circle,scale=0.37] at (b1){};
+\node[fill=black,circle,scale=0.37] at (b2){};
+\node[fill=black,circle,scale=0.37] at (b3){};
+\node[fill=black,circle,scale=0.37] at (c1){};
+\node[fill=black,circle,scale=0.37] at (c2){};
+\node[fill=black,circle,scale=0.37] at (c3){};
+\node[fill=black,circle,scale=0.37] at (c4){};
+\node[fill=black,circle,scale=0.37] at (c5){};
+\node[fill=black,circle,scale=0.37] at (d1){};
+\node[fill=black,circle,scale=0.37] at (d2){};
+\node[fill=black,circle,scale=0.37] at (d3){};
+\node[fill=black,circle,scale=0.37] at (d4){};
+	
+
+%% draw arrows
+\draw[-latex, very thin] (a2) -- (aa4);
+\draw[-latex, very thin] (a1) to (a52);
+\draw[-latex, very thin] (a3) to (a51);
+
+\draw[-latex, very thin] (b1) -- (bb3);
+
+\draw[-latex, very thin] (c1) -- (c52);
+\draw[-latex, very thin] (c3) to (c51);
+\draw[-latex, very thin] (c1) to (c41);
+\draw[-latex, very thin] (c2) to (c42);
+
+\draw[-latex, very thin] (d2) to (d41);
+\draw[-latex, very thin] (d1) to (d42);
+
+%% A function & Not a function
+\node at (-5.5,1.5) {function};
+\node at (-5.5,-8.5) {not a function};
+\node at (5.5,-8.5) {not a function};
+\node at (5.5,1.5) {function};
+
+%% A & B
+\node at (-8,8) {$A$};
+\node at (-3,8) {$B$};
+
+\node at (3,8) {$A$};
+\node at (8,8) {$B$};
+
+\node at (-8,-2) {$A$};
+\node at (-3,-2) {$B$};
+
+\node at (3,-2) {$A$};
+\node at (8,-2) {$B$};
+
+\end{tikzpicture}

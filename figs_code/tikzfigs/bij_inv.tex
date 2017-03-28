@@ -1,0 +1,32 @@
+
+\begin{tikzpicture}[scale=0.4,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    decoration={brace,amplitude=7pt},
+    ] 
+%% draw circles
+\draw[name path=ellipse,very thick]
+		(0,0) circle[x radius = 1.5 cm, y radius = 3 cm];
+
+\draw[name path=ellipse,very thick]
+		(8,0) circle[x radius = 1.5 cm, y radius = 3 cm];
+
+\draw[name path=ellipse,very thick]
+		(-8,0) circle[x radius = 1.5 cm, y radius = 3 cm];
+
+%% paths
+\draw[-latex, very thin] (-6.3,1)  to [out=20,in=160] node[above] {$f$} (-1.7,1);
+\draw[-latex, very thin] (-1.7,-1)  to [out=200,in=-20] node[below] {$f^{-1}$} (-6.3,-1);
+
+\draw[-latex, very thin] (1.7,1)  to [out=20,in=160] node[above] {$g$} (6.3,1);
+\draw[-latex, very thin] (6.3,-1)  to [out=200,in=-20] node[below] {$g^{-1}$} (1.7,-1);
+
+
+%% A & B & C
+\node at (-8,4) {$A$};
+\node at (0,4) {$B$};
+\node at (8,4) {$C$};
+
+\end{tikzpicture}

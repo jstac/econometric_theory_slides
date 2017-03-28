@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=1,
+    axis/.style={->, >=stealth'},
+    important line/.style={thick},
+    dashed line/.style={dashed, thin},
+    every node/.style={color=black},
+    decoration={brace,amplitude=7pt},
+    ] 
+
+%% draw nodes
+\coordinate (x1) at (-2,2);  \coordinate (x11) at (-2,1.8); \coordinate (x12) at (-1.8,2);  
+\coordinate (x2) at (-2,0); \coordinate (x21) at (-1.8,0); \coordinate (x22) at (-2,0.2);
+\coordinate (x3) at (2,2);   \coordinate (x31) at (1.8,2);  \coordinate (x32) at (2,1.8);
+\coordinate (x4) at (2,0);  \coordinate (x41) at (1.8,0); \coordinate (x42) at (2,0.2);
+
+\node[fill=black,circle,scale=0.37] at (x1){};
+\node[fill=black,circle,scale=0.37] at (x2){};
+\node[fill=black,circle,scale=0.37] at (x3){};
+\node[fill=black,circle,scale=0.37] at (x4){};
+
+%% label x & Ax
+\draw (x2) node[below=5pt] {$\boldx$};
+\draw (x4) node[below=5pt] {$\boldA\boldx$};
+
+%% draw arrows
+\draw[important line, ->]  (x21) -- node[above=5pt] {$\boldA$} (x41);
+\draw[important line, ->]  (x22) -- node[left=5pt] {$\boldP^{-1}$} (x11);
+\draw[important line, ->]  (x12) -- node[above=5pt] {$\boldB$} (x31);
+\draw[important line, ->]  (x32) -- node[right=5pt] {$\boldP$} (x42);
+  
+\end{tikzpicture}
