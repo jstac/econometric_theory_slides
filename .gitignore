@@ -1,0 +1,12 @@
+*.log
+*.aux
+*.bcf
+*.nav
+*.out
+*.toc
+*.snm
+*.run.xml
+_minted*/
+
+
+
