@@ -21,12 +21,12 @@
 %%%%%%%%%%%%%%%%%%%%%% start my preamble %%%%%%%%%%%%%%%%%%%%%%
 
 
-\addtobeamertemplate{navigation symbols}{}{%
-    \usebeamerfont{footline}%
-    \usebeamercolor[fg]{footline}%
-    \hspace{1em}%
-    \insertframenumber/\inserttotalframenumber
-} 
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%} 
 
 \setbeamercolor{footline}{fg=blue}
 \setbeamerfont{footline}{series=\bfseries}
@@ -87,7 +87,7 @@
 \newminted{ipython}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
 \newminted{julia}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
 \newminted{c}{mathescape,linenos=true}
-\newminted{r}{mathescape,  frame=none, baselinestretch=1, framesep=2mm}
+\newminted{r}{mathescape,  frame=none, baselinestretch=1,  framesep=2mm}
 \renewcommand{\theFancyVerbLine}{\sffamily
     \textcolor[rgb]{0.5,0.5,1.0}{\scriptsize {\arabic{FancyVerbLine}}}}
 
@@ -308,8 +308,7 @@
 %\newtheorem{exercise}{Ex.}[section]
 %\newtheorem{fact}{Fact}[section]
 
-% Bibliography
-\usepackage[authordate,uniquename=false,firstinits,backend=biber,maxcitenames=2]{biblatex-chicago}
+\usepackage{biblatex}
 \DeclareFieldFormat[article]{title}{#1}
 \DeclareFieldFormat[inproceedings]{title}{#1}
 \addbibresource{et_newbib.bib}
